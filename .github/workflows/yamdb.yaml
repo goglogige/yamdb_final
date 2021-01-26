@@ -1,4 +1,4 @@
-name: Flask-app workflow
+name: Yamdb_final workflow
 
 on: [push]
 
@@ -23,7 +23,7 @@ jobs:
       run: flake8 .
 
     - name: Test with pytest
-      run: pytest tests.py
+      run: pytest
 
 
   build_and_push_to_docker_hub:
@@ -44,7 +44,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: goglogige/flask-app:latest
+          tags: goglogige/yamdb_final:latest
 
 
   deploy:
@@ -61,9 +61,9 @@ jobs:
           source: "docker-compose.yaml, nginx/default.conf"
           target: "~/app/"
           script: |
-            sudo docker pull goglogige/flask-app
+            sudo docker pull goglogige/yamdb_final
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 goglogige/flask-app
+            sudo docker run --rm -d -p 5000:5000 goglogige/yamdb_final
 
  
   send_message:
