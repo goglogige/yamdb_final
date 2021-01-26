@@ -15,7 +15,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   app:
-    build: .
+    image: goglogige/yamdb_final:latest
     volumes:
       - staticfiles:/code/static
     ports:
