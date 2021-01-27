@@ -1,6 +1,6 @@
+from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.core.mail import send_mail
 from django.db.models import Avg
-from django.shortcuts import get_object_or_404
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, generics, status, viewsets
@@ -9,9 +9,7 @@ from rest_framework.generics import get_object_or_404
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import AllowAny, IsAdminUser, IsAuthenticated
 from rest_framework.response import Response
-from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
-from django.contrib.auth.tokens import PasswordResetTokenGenerator
 
 from api_yamdb.settings import EMAIL_HOST_USER
 from .filters import TitleFilter
@@ -69,7 +67,7 @@ class UsersViewSet(viewsets.ModelViewSet):
     lookup_field = 'username'
 
     def get_permissions(self):
-        if self.action is 'profile':
+        if self.action == 'profile':
             return [IsAuthenticated()]
         return super().get_permissions()
 

@@ -2,8 +2,8 @@ from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
 from .views import (CategoryDestroy, CategoryListCreate, CommentViewSet,
-                    GenreDestroy, GenreListCreate, #GetPatchYourProfile,
-                    ReviewViewSet, TitleViewSet, UsersViewSet, confirm_email,
+                    GenreDestroy, GenreListCreate, ReviewViewSet,
+                    TitleViewSet, UsersViewSet, confirm_email,
                     registration)
 
 

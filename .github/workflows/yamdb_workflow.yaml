@@ -20,7 +20,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Lint with flake8
-      run: flake8 .
+      run: flake8 . --exclude ./api_yamdb/migrations/,./api/migrations/,./tests/,./data/ 
 
     - name: Test with pytest
       run: pytest
