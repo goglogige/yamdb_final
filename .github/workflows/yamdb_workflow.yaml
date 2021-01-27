@@ -64,7 +64,7 @@ jobs:
             sudo docker pull goglogige/yamdb_final
             cd yamdb_final
             sudo docker-compose down
-            sudo docker rmi $(sudo docker ps -a -q)
+            sudo docker rmi $(sudo docker images -a -q)
             sudo docker-compose up
 
  
