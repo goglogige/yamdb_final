@@ -20,7 +20,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Lint with flake8
-      run: flake8 .
+      run: flake8 . --exclude ./api_yamdb/migrations/,./api/migrations/,./tests/,./data/
 
     - name: Test with pytest
       run: pytest
@@ -62,8 +62,10 @@ jobs:
           target: "~/app/"
           script: |
             sudo docker pull goglogige/yamdb_final
-            sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 goglogige/yamdb_final
+            cd yamdb_final
+            sudo docker-compose down
+            sudo docker rmi $(sudo docker images -a -q)
+            sudo docker-compose up
 
  
   send_message:
