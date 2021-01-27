@@ -59,7 +59,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           source: "docker-compose.yaml, nginx/default.conf"
-          target: "~/yamdb-final/"
+          target: "~/yamdb_final/"
           script: |
             sudo docker pull goglogige/yamdb_final
             sudo docker stop $(sudo docker ps -a -q)
