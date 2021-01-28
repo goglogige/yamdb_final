@@ -44,8 +44,8 @@ scp ./<FILENAME> <USER>@<HOST>:/home/<USER>/yamdb_final/
 Для использования Continuous Integration и Continuous Deployment необходимо в репозитории на GitHub прописать Secrets - переменные доступа к вашим сервисам.
 Переменые прописаны в workflows/yamdb_workflow.yaml
 
-DOCKER_PASSWORD, DOCKER_USERNAME - для загрузки и скачивания образа с DockerHub
-USER, HOST, PASSPHRASE, SSH_KEY - для подключения к удаленному серверу
+DOCKER_PASSWORD, DOCKER_USERNAME - для загрузки и скачивания образа с DockerHub 
+USER, HOST, PASSPHRASE, SSH_KEY - для подключения к удаленному серверу 
 TELEGRAM_TO, TELEGRAM_TOKEN - для отправки сообщений в Telegram
 
 ### Развертывание приложения
@@ -70,7 +70,7 @@ python manage.py createsuperuser.
 5. К проекту по адресу http://0.0.0.0/redoc/ подключена документация API. В ней описаны шаблоны запросов к API и ответы. Для каждого запроса указаны уровни прав доступа - пользовательские роли, которым разрешён запрос.
 
 ## Технологии используемые в проекте
-Python, Django, Django REST Framework, PostgreSQL, Nginx, Docker.
+Python, Django, Django REST Framework, PostgreSQL, Nginx, Docker, GitHub Actions
 
 ## Авторы
 
