@@ -44,9 +44,9 @@ scp ./<FILENAME> <USER>@<HOST>:/home/<USER>/yamdb_final/
 Для использования Continuous Integration и Continuous Deployment необходимо в репозитории на GitHub прописать Secrets - переменные доступа к вашим сервисам.
 Переменые прописаны в workflows/yamdb_workflow.yaml
 
-DOCKER_PASSWORD, DOCKER_USERNAME - для загрузки и скачивания образа с DockerHub 
-USER, HOST, PASSPHRASE, SSH_KEY - для подключения к удаленному серверу 
-TELEGRAM_TO, TELEGRAM_TOKEN - для отправки сообщений в Telegram
+* DOCKER_PASSWORD, DOCKER_USERNAME - для загрузки и скачивания образа с DockerHub 
+* USER, HOST, PASSPHRASE, SSH_KEY - для подключения к удаленному серверу 
+* TELEGRAM_TO, TELEGRAM_TOKEN - для отправки сообщений в Telegram
 
 ### Развертывание приложения
 
