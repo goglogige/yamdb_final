@@ -1,5 +1,7 @@
 # REST API для сервиса - база отзывов о фильмах, книгах и музыке.
 
+![Alt](https://github.com/goglogige/yamdb_final/workflows/Yamdb_final%20workflow/badge.svg 'Actions Status')
+
 С использованием Continuous Integration и Continuous Deployment.
 При пуше в ветку main автоматически отрабатывают сценарии:
 1. Автоматический запуск тестов,
@@ -86,7 +88,3 @@ Python, Django, Django REST Framework, PostgreSQL, Nginx, Docker, GitHub Actions
 * Наставникам
 * Код ревьюверу
 * Отзывчивым однокурсникам
-
-## Бэйдж
-
-![Alt](https://github.com/goglogige/yamdb_final/workflows/Yamdb_final%20workflow/badge.svg 'Actions Status')
