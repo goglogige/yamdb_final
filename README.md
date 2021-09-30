@@ -89,5 +89,4 @@ Python, Django, Django REST Framework, PostgreSQL, Nginx, Docker, GitHub Actions
 
 ## Бэйдж
 
-![Alt-Actions Status](https://github.com/goglogige/yamdb_final/workflows/Yamdb_final%20workflow/badge.svg)
-[![Actions Status](https://github.com/{user}/{repo}/workflows/{action}/badge.svg)](https://github.com/{user}/{repo}/actions)
+![Alt](https://github.com/goglogige/yamdb_final/workflows/Yamdb_final%20workflow/badge.svg 'Actions Status')
