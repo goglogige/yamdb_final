@@ -58,8 +58,6 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
-          source: "docker-compose.yaml, nginx/default.conf"
-          target: "~/app/"
           script: |
             sudo docker pull goglogige/yamdb_final
             cd yamdb_final
